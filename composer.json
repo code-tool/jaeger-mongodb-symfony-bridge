@@ -1,0 +1,22 @@
+{
+  "name": "code-tool/jaeger-mongodb-symfony-bridge",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "Jaeger\\MongoDb\\Symfony\\": "src/"
+    }
+  },
+  "require": {
+    "php": ">=7.1",
+    "symfony/config": "~2 || ~3 || ~4",
+    "symfony/http-kernel": "~2 || ~3 || ~4",
+    "symfony/dependency-injection": "~2 || ~3 || ~4",
+    "code-tool/jaeger-client-php": "~2.7",
+    "code-tool/jaeger-mongodb-collector": "dev-master as 1.0.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "@stable"
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}

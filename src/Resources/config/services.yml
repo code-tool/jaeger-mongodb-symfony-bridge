@@ -1,0 +1,8 @@
+parameters:
+services:
+  jaeger.mongodb.command.convertor:
+    class: CodeTool\Jaeger\MongoDb\JaegerMongoDbCommandConvertor
+  jaeger.mongodb.query.time.collector:
+    public: true
+    class: CodeTool\Jaeger\MongoDb\JaegerMongoDbQueryTimeCollector
+    arguments: ['@jaeger.tracer', '@jaeger.mongodb.command.convertor']
