@@ -12,7 +12,7 @@
     "symfony/http-kernel": "~2 || ~3 || ~4",
     "symfony/dependency-injection": "~2 || ~3 || ~4",
     "code-tool/jaeger-client-php": "~2.7",
-    "code-tool/jaeger-mongodb-collector": "dev-master"
+    "code-tool/jaeger-mongodb-collector": "~1"
   },
   "require-dev": {
     "phpunit/phpunit": "@stable"
