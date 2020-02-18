@@ -11,7 +11,10 @@ class JaegerMongoDbBundle extends Bundle
     public function boot()
     {
         parent::boot();
-        \MongoDB\Driver\Monitoring\addSubscriber($this->container->get('jaeger.mongodb.query.time.collector'));
+
+        if ($this->container->getParameter('jaeger.mongodb.auto_subscribe')) {
+            \MongoDB\Driver\Monitoring\addSubscriber($this->container->get('jaeger.mongodb.query.time.collector'));
+        }
     }
 
 

@@ -18,5 +18,10 @@ class JaegerMongoDbExtension extends Extension
             new FileLocator(__DIR__ . '/../config')
         );
         $loader->load('services.yml');
+
+        $configuration = $this->getConfiguration($configs, $container);
+        $config = $this->processConfiguration($configuration, $configs);
+
+        $container->setParameter('jaeger.mongodb.auto_subscribe', $config['auto_subscribe']);
     }
 }
