@@ -24,4 +24,9 @@ class JaegerMongoDbExtension extends Extension
 
         $container->setParameter('jaeger.mongodb.auto_subscribe', $config['auto_subscribe']);
     }
+
+    public function getAlias(): string
+    {
+        return 'jaeger_mongodb';
+    }
 }
