@@ -4,11 +4,12 @@ declare(strict_types=1);
 namespace Jaeger\MongoDb\Symfony;
 
 use Jaeger\MongoDb\Symfony\Resources\DependencyInjection\JaegerMongoDbExtension;
+use Symfony\Component\DependencyInjection\Extension\ExtensionInterface;
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
 class JaegerMongoDbBundle extends Bundle
 {
-    public function boot()
+    public function boot(): void
     {
         parent::boot();
 
@@ -17,8 +18,7 @@ class JaegerMongoDbBundle extends Bundle
         }
     }
 
-
-    public function getContainerExtension()
+    public function getContainerExtension(): ExtensionInterface
     {
         return new JaegerMongoDbExtension();
     }
