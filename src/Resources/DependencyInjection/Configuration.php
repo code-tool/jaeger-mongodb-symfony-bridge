@@ -8,17 +8,12 @@ use Symfony\Component\Config\Definition\ConfigurationInterface;
 
 class Configuration implements ConfigurationInterface
 {
-    public function getConfigTreeBuilder()
+    public function getConfigTreeBuilder(): TreeBuilder
     {
         $treeBuilder = new TreeBuilder('jaeger_mongodb');
-        if (method_exists($treeBuilder, 'getRootNode')) {
-            $rootNode = $treeBuilder->getRootNode();
-        } else {
-            $rootNode = $treeBuilder->root('jaeger_mongodb');
-        }
 
         // @formatter:off
-        $rootNode
+        $treeBuilder->getRootNode()
             ->children()
                 ->booleanNode('auto_subscribe')
                     ->info('Register collector on bundle boot')
