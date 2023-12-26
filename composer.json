@@ -14,9 +14,6 @@
     "code-tool/jaeger-client-php": "@stable",
     "code-tool/jaeger-mongodb-collector": "~1"
   },
-  "require-dev": {
-    "phpunit/phpunit": "^9.5"
-  },
   "minimum-stability": "dev",
   "prefer-stable": true
 }
